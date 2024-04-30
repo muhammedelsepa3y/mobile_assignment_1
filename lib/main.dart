@@ -10,17 +10,12 @@ import 'package:mobile_assignment_1/services/navigation_service.dart';
 import 'package:provider/provider.dart';
 
 void main()async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
-  runApp(MyApp());}
-class MyApp extends StatefulWidget {
-  MyApp({super.key});
-
-  @override
-  State<MyApp> createState() => _MyAppState();
+  runApp(MyApp());
 }
-
-class _MyAppState extends State<MyApp> {
-
+class MyApp extends StatelessWidget {
+  MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
